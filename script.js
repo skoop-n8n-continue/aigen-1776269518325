@@ -1,9 +1,9 @@
 const facts = [
-    { title: "Daily Eco-Fact", text: "Forests cover about 31% of the world's land surface and provide habitat for over 80% of terrestrial species." },
-    { title: "Energy Insight", text: "Wind energy is one of the fastest-growing renewable energy sources, with global capacity increasing by 50% since 2018." },
-    { title: "Ocean Health", text: "The ocean absorbs about 30% of carbon dioxide produced by humans, buffering the impacts of global warming." },
-    { title: "Conservation Status", text: "Protecting 30% of our planet's land and oceans by 2030 is critical for preventing mass extinction." },
-    { title: "Water Wisdom", text: "Less than 1% of the world's freshwater is accessible for human use, making conservation vital." }
+    { title: "City Insight", text: "Smart lighting systems can reduce municipal energy costs by up to 50% while improving public safety." },
+    { title: "Network Status", text: "Global internet traffic is projected to grow by 25% annually as city infrastructure becomes increasingly connected." },
+    { title: "Traffic Data", text: "Real-time AI traffic management can reduce average commute times in major metro areas by 15-20%." },
+    { title: "Urban Growth", text: "By 2050, it is estimated that nearly 70% of the world's population will live in urban centers." },
+    { title: "Data Security", text: "Advanced encryption protocols protect 100% of the municipal data transmitted across the city grid." }
 ];
 
 let factIndex = 0;
@@ -68,10 +68,10 @@ setInterval(rotateFacts, 10000);
 setInterval(() => {
     const metrics = document.querySelectorAll('.metric');
     metrics.forEach(m => {
-        if (m.textContent.includes('kWh')) {
+        if (m.textContent.includes('dB')) {
             let val = parseFloat(m.textContent);
-            val += (Math.random() - 0.4) * 0.1;
-            m.textContent = `${val.toFixed(1)} kWh`;
+            val += (Math.random() - 0.5) * 0.5;
+            m.textContent = `${val.toFixed(1)} dB`;
         }
     });
 }, 5000);
